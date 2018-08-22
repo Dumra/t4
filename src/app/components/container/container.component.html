@@ -1,0 +1,5 @@
+<app-game-control (counterEmitter)="handleCounter($event)" (unsetCounter)="clearGame($event)"></app-game-control>
+<div *ngFor="let item of counterArray">
+    <app-even *ngIf="item.isEven" [(evenNumber)]="item.number"></app-even>
+    <app-odd  *ngIf="!item.isEven" [(oddNumber)]="item.number"></app-odd>
+</div>
